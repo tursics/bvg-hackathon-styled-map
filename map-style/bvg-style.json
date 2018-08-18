@@ -15,8 +15,8 @@
       "url": "https://tursics.com/maps/tileserver.php?/2017-07-03_germany_berlin.json"
     }
   },
-  "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
-  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://tursics.com/maps/style/sprite",
+  "glyphs": "http://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",

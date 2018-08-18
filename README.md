@@ -20,3 +20,5 @@ This is the very beginning of the project. Let's share some links
   - 57.25 GB of [Planet, Vector and raster map tiles](https://openmaptiles.com/downloads/planet/)
   - 135.49 MB of [Berlin, Vector and raster map tiles](https://openmaptiles.com/downloads/europe/germany/berlin/)
   - download ```osm-2018-08-13-v3.8-germany_berlin.mbtiles```
+- I have installed tileserver-php and copied the .mbtiles file to my own server
+- the new style file is served here: https://tursics.github.io/bvg-hackathon-styled-map/map-style/bvg-style.json
