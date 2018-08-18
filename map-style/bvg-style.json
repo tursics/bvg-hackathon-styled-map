@@ -16,7 +16,7 @@
     }
   },
   "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
-  "glyphs": "https://maps.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=SymbVzXrAD6Jmqe6yBOS ",
+  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
       "id": "background",
