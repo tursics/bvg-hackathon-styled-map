@@ -11,3 +11,12 @@ This is the very beginning of the project. Let's share some links
 - [Maputnik online editor](https://maputnik.github.io/editor/#14.89/52.52072/13.36238)
 - [Extracting geodata from OpenStreetMap with Osmfilter](https://journocode.com/2018/01/08/extract-geodata-openstreetmap-osmfilter/)
 - [OSM map features](https://wiki.openstreetmap.org/wiki/Map_Features#Building)
+
+
+- [Using OpenMapTiles with Mapbox GL](https://openmaptiles.org/docs/style/mapbox-gl-style-spec/)
+- [Serve Raster and Vector Tiles with Tileserver GL](https://openmaptiles.org/docs/host/tileserver-gl/)
+- or use [TileServer PHP](https://openmaptiles.org/docs/host/tileserver-php/)
+- map tiles
+  - 57.25 GB of [Planet, Vector and raster map tiles](https://openmaptiles.com/downloads/planet/)
+  - 135.49 MB of [Berlin, Vector and raster map tiles](https://openmaptiles.com/downloads/europe/germany/berlin/)
+  - download ```osm-2018-08-13-v3.8-germany_berlin.mbtiles```

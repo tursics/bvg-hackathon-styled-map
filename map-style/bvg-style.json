@@ -12,7 +12,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://maps.tilehosting.com/data/v3.json?key=SymbVzXrAD6Jmqe6yBOS "
+      "url": "https://tursics.com/maps/tileserver.php?/2017-07-03_germany_berlin.json"
 	}
   },
   "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
