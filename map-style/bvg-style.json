@@ -12,11 +12,11 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://free.tilehosting.com/data/v3.json?key={key}"
-    }
+      "url": "https://maps.tilehosting.com/data/v3.json?key=SymbVzXrAD6Jmqe6yBOS "
+	}
   },
   "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
-  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "glyphs": "https://maps.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=SymbVzXrAD6Jmqe6yBOS ",
   "layers": [
     {
       "id": "background",
