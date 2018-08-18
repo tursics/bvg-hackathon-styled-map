@@ -13,7 +13,7 @@
     "openmaptiles": {
       "type": "vector",
       "url": "https://tursics.com/maps/tileserver.php?/2017-07-03_germany_berlin.json"
-	}
+    }
   },
   "sprite": "https://openmaptiles.github.io/klokantech-basic-gl-style/sprite",
   "glyphs": "https://maps.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=SymbVzXrAD6Jmqe6yBOS ",
@@ -528,7 +528,8 @@
               10
             ]
           ]
-        }
+        },
+        "line-opacity": 1
       }
     },
     {
@@ -653,7 +654,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "#fff",
+        "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -670,7 +671,8 @@
         "line-dasharray": [
           0.28,
           0.14
-        ]
+        ],
+        "line-opacity": 1
       }
     },
     {
@@ -1463,41 +1465,6 @@
           "==",
           "rank",
           1
-        ]
-      ],
-      "layout": {
-        "text-size": 11,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "visibility": "visible",
-        "text-offset": [
-          0,
-          0.5
-        ],
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-max-width": 8
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-blur": 1
-      }
-    },
-    {
-      "id": "airport-label",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "aerodrome_label",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "has",
-          "iata"
         ]
       ],
       "layout": {
