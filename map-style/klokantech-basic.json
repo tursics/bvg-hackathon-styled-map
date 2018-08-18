@@ -28,8 +28,12 @@
     {
       "id": "landuse-residential",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "Wohnflächen, allgemein Bebaut"
+      },
       "source": "openmaptiles",
       "source-layer": "landuse",
+      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -47,13 +51,16 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(230, 217, 242, 1)",
-        "fill-opacity": 0.7
+        "fill-color": "rgba(229, 233, 212, 1)",
+        "fill-opacity": 1
       }
     },
     {
       "id": "landcover_grass",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "Parkanlagen (z.B. Großer Tiergarten)"
+      },
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": [
@@ -63,7 +70,7 @@
       ],
       "paint": {
         "fill-color": "rgba(191, 255, 204, 1)",
-        "fill-opacity": 0.45
+        "fill-opacity": 1
       }
     },
     {
@@ -79,6 +86,9 @@
     {
       "id": "landcover_wood",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "Parkanlagen (z.B. Großer Tiergarten)"
+      },
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": [
@@ -87,13 +97,13 @@
         "wood"
       ],
       "paint": {
-        "fill-color": "hsl(82, 46%, 72%)",
+        "fill-color": "rgba(191, 255, 204, 1)",
         "fill-opacity": {
           "base": 1,
           "stops": [
             [
               8,
-              0.6
+              1
             ],
             [
               22,
@@ -106,6 +116,9 @@
     {
       "id": "water",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "Gewässer"
+      },
       "source": "openmaptiles",
       "source-layer": "water",
       "filter": [
@@ -114,8 +127,8 @@
         "Polygon"
       ],
       "paint": {
-        "fill-color": "rgba(204, 255, 255, 1)",
-        "fill-outline-color": "rgba(51, 179, 217, 1)"
+        "fill-color": "rgba(205, 239, 251, 1)",
+        "fill-outline-color": "rgba(61, 144, 190, 1)"
       }
     },
     {
@@ -299,6 +312,9 @@
     {
       "id": "waterway",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Gewässer"
+      },
       "source": "openmaptiles",
       "source-layer": "waterway",
       "filter": [
@@ -316,7 +332,7 @@
         ]
       ],
       "paint": {
-        "line-color": "rgba(204, 255, 255, 1)",
+        "line-color": "rgba(205, 239, 251, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -385,10 +401,13 @@
     {
       "id": "building",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "öffentliche Gebäude"
+      },
       "source": "openmaptiles",
       "source-layer": "building",
       "paint": {
-        "fill-color": "rgba(222, 211, 190, 1)",
+        "fill-color": "rgba(196, 167, 186, 1)",
         "fill-outline-color": {
           "stops": [
             [
