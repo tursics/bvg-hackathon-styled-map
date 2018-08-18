@@ -76,10 +76,13 @@
     {
       "id": "park",
       "type": "fill",
+      "metadata": {
+        "maputnik:comment": "Parkanlagen (z.B. Großer Tiergarten)"
+      },
       "source": "openmaptiles",
       "source-layer": "park",
       "paint": {
-        "fill-color": "rgba(192, 216, 151, 0.53)",
+        "fill-color": "rgba(191, 255, 204, 1)",
         "fill-opacity": 1
       }
     },
@@ -485,6 +488,9 @@
     {
       "id": "road_path",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Parkwege"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -506,9 +512,8 @@
         "line-join": "bevel"
       },
       "paint": {
-        "line-color": "hsl(0, 0%, 97%)",
+        "line-color": "rgba(255, 255, 255, 1)",
         "line-dasharray": [
-          1,
           1
         ],
         "line-width": {
@@ -529,6 +534,9 @@
     {
       "id": "road_minor",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Nebenstraße"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -550,7 +558,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "hsl(0, 0%, 97%)",
+        "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -801,6 +809,9 @@
     {
       "id": "road_trunk_primary",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Bundesstraße"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -822,7 +833,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff",
+        "line-color": "rgba(242, 247, 179, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -841,6 +852,9 @@
     {
       "id": "road_secondary_tertiary",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Landstraße"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -862,7 +876,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff",
+        "line-color": "rgba(242, 247, 179, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -881,6 +895,9 @@
     {
       "id": "road_major_motorway",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Autobahn"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -901,7 +918,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "hsl(0, 0%, 100%)",
+        "line-color": "rgba(242, 247, 179, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -1213,6 +1230,9 @@
     {
       "id": "bridge_major case",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Brücke, Bundesstraße, Rand"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -1241,7 +1261,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "#dedede",
+        "line-color": "rgba(179, 186, 188, 1)",
         "line-width": {
           "base": 1.6,
           "stops": [
@@ -1317,6 +1337,9 @@
     {
       "id": "bridge_major",
       "type": "line",
+      "metadata": {
+        "maputnik:comment": "Brücke, Bundesstraße"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -1345,7 +1368,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff",
+        "line-color": "rgba(242, 247, 179, 1)",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -1502,6 +1525,9 @@
     {
       "id": "road_major_label",
       "type": "symbol",
+      "metadata": {
+        "maputnik:comment": "Text, Straße"
+      },
       "source": "openmaptiles",
       "source-layer": "transportation_name",
       "filter": [
@@ -1533,7 +1559,7 @@
         "text-rotation-alignment": "map"
       },
       "paint": {
-        "text-color": "#000",
+        "text-color": "rgba(67, 71, 72, 1)",
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 2
       }
