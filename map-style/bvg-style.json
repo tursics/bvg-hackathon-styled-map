@@ -1556,7 +1556,7 @@
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": [
-          "Noto Sans Regular"
+          "Open Sans Regular"
         ],
         "text-max-width": 6,
         "text-size": {
@@ -1603,7 +1603,7 @@
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": [
-          "Noto Sans Regular"
+          "Open Sans Regular"
         ],
         "text-max-width": 10,
         "text-size": {
@@ -1652,7 +1652,7 @@
       "layout": {
         "text-field": "{name:latin}",
         "text-font": [
-          "Noto Sans Regular"
+          "Open Sans Regular"
         ],
         "text-max-width": 10,
         "text-size": {
@@ -1702,7 +1702,7 @@
       "layout": {
         "text-field": "{name:latin}",
         "text-font": [
-          "Noto Sans Bold"
+          "Open Sans Bold"
         ],
         "text-max-width": 10,
         "text-size": {
