@@ -1470,7 +1470,7 @@
       "layout": {
         "text-size": 11,
         "text-font": [
-          "Noto Sans Regular"
+          "Open Sans Regular"
         ],
         "visibility": "visible",
         "text-offset": [
@@ -1506,7 +1506,7 @@
         "symbol-placement": "line",
         "text-field": "{name:latin} {name:nonlatin}",
         "text-font": [
-          "Noto Sans Regular"
+          "Open Sans Regular"
         ],
         "text-transform": "uppercase",
         "text-letter-spacing": 0.1,
