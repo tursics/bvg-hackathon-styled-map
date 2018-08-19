@@ -24,9 +24,13 @@ This is the very beginning of the project. Let's share some links
 - the new style file is served here: https://tursics.github.io/bvg-hackathon-styled-map/map-style/bvg-style.json
 
 
-- go to [VBB GTFS](https://vbb-gtfs.jannisr.de/latest/) from Jannis
-- or use overpass api?
-
-
 - https://github.com/TheGartrellGroup/Mapbox-GL-Print-Export-For-Port does not work
 - use https://github.com/mpetroff/print-maps
+
+
+- did not use [VBB GTFS](https://vbb-gtfs.jannisr.de/latest/) from Jannis
+- I use overpass api
+  - https://overpass-turbo.eu/
+  - my queries are in the /map-style/ folder
+  - generate geojson files for all types of lines for the map
+- use QGIS to simplify the lines
