@@ -247,6 +247,50 @@
       }
     },
     {
+      "id": "public_building",
+      "type": "fill",
+      "metadata": {
+        "maputnik:comment": "öffentliche Gebäude"
+      },
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "minzoom": 0,
+      "filter": [
+        "any",
+        [
+          "==",
+          "class",
+          "library"
+        ],
+        [
+          "==",
+          "class",
+          "university"
+        ],
+        [
+          "==",
+          "class",
+          "school"
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgba(196, 167, 186, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              13,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "park_outline",
       "type": "line",
       "source": "openmaptiles",
@@ -413,7 +457,7 @@
       "source": "openmaptiles",
       "source-layer": "building",
       "filter": [
-        "any"
+        "all"
       ],
       "paint": {
         "fill-color": "rgba(196, 167, 186, 1)",
@@ -438,7 +482,7 @@
             ],
             [
               15,
-              1
+              0
             ]
           ]
         },
