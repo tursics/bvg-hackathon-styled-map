@@ -263,6 +263,25 @@
 				'minzoom': 14
 			});
 
+			afterMap.addSource('tram', {
+				type: 'geojson',
+				data: 'https://tursics.github.io/bvg-hackathon-styled-map/map-style/data-tram.geojson'
+			});
+			afterMap.addLayer({
+				'id': 'tram',
+				'type': 'line',
+				'source': 'tram',
+				'layout': {
+					'line-join': 'bevel',
+					'line-cap': 'butt'
+				},
+				'paint': {
+					'line-color': '#ed1c24',
+					'line-width': 2
+				},
+				'minzoom': 14
+			});
+
 		}
 
 	</script>
