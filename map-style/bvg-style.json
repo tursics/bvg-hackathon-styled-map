@@ -271,6 +271,11 @@
           "==",
           "class",
           "school"
+        ],
+        [
+          "==",
+          "class",
+          "hospital"
         ]
       ],
       "layout": {},
