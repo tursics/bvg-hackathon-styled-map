@@ -181,13 +181,14 @@
 				'type': 'line',
 				'source': 'subway',
 				'layout': {
-					'line-join': 'round',
-					'line-cap': 'round'
+					'line-join': 'bevel',
+					'line-cap': 'butt'
 				},
 				'paint': {
 					'line-color': '#166ab8',
 					'line-width': 6
-				}
+				},
+				'minzoom': 13
 			});
 
 			afterMap.addSource('light-rail', {
@@ -199,14 +200,69 @@
 				'type': 'line',
 				'source': 'light-rail',
 				'layout': {
-					'line-join': 'round',
-					'line-cap': 'round'
+					'line-join': 'bevel',
+					'line-cap': 'butt'
 				},
 				'paint': {
 					'line-color': '#49974a',
 					'line-width': 6
-				}
+				},
+				'minzoom': 13
 			});
+
+			afterMap.addSource('rail', {
+				type: 'geojson',
+				data: 'https://tursics.github.io/bvg-hackathon-styled-map/map-style/data-rail.geojson'
+			});
+			afterMap.addLayer({
+				'id': 'rail-white',
+				'type': 'line',
+				'source': 'rail',
+				'layout': {
+					'line-join': 'bevel',
+					'line-cap': 'butt'
+				},
+				'paint': {
+					'line-color': '#ffffff',
+					'line-width': 6
+				},
+				'minzoom': 10
+			});
+			afterMap.addLayer({
+				'id': 'rail-dot',
+				'type': 'line',
+				'source': 'rail',
+				'layout': {
+					'line-join': 'bevel',
+					'line-cap': 'butt'
+				},
+				'paint': {
+					'line-color': '#ed1c24',
+					'line-dasharray': [5, 5],
+					'line-width': 6
+				},
+				'minzoom': 10
+			});
+
+			afterMap.addSource('bus', {
+				type: 'geojson',
+				data: 'https://tursics.github.io/bvg-hackathon-styled-map/map-style/data-bus.geojson'
+			});
+			afterMap.addLayer({
+				'id': 'bus',
+				'type': 'line',
+				'source': 'bus',
+				'layout': {
+					'line-join': 'bevel',
+					'line-cap': 'butt'
+				},
+				'paint': {
+					'line-color': '#49974a',
+					'line-width': 3
+				},
+				'minzoom': 14
+			});
+
 		}
 
 	</script>
