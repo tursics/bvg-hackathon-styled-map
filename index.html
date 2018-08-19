@@ -71,7 +71,24 @@
 			}
 		}
 
+		class PayloadControl {
+			onAdd(map){
+				this.map = afterMap;
+				this.container = document.createElement('div');
+				this.container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+				this.container.innerHTML = '<button class="mapboxgl-ctrl-icon" type="button" aria-label="payload">1.</button>';
+				this.container.onclick = payload;
+				return this.container;
+			}
+			onRemove(){
+				this.container.parentNode.removeChild(this.container);
+				this.map = undefined;
+			}
+		}
+
 		const printControl = new PrintControl();
+		const payloadControl = new PayloadControl();
+		afterMap.addControl(payloadControl);
 		afterMap.addControl(printControl);
 
 		function generateMap() {
@@ -151,6 +168,44 @@
 				Object.defineProperty(window, 'devicePixelRatio', {
 					get: function() {return actualPixelRatio}
 				});
+			});
+		}
+
+		function payload() {
+			afterMap.addSource('subway', {
+				type: 'geojson',
+				data: 'https://tursics.github.io/bvg-hackathon-styled-map/map-style/data-subway.geojson'
+			});
+			afterMap.addLayer({
+				'id': 'subway',
+				'type': 'line',
+				'source': 'subway',
+				'layout': {
+					'line-join': 'round',
+					'line-cap': 'round'
+				},
+				'paint': {
+					'line-color': '#166ab8',
+					'line-width': 6
+				}
+			});
+
+			afterMap.addSource('light-rail', {
+				type: 'geojson',
+				data: 'https://tursics.github.io/bvg-hackathon-styled-map/map-style/data-light-rail.geojson'
+			});
+			afterMap.addLayer({
+				'id': 'light-rail',
+				'type': 'line',
+				'source': 'light-rail',
+				'layout': {
+					'line-join': 'round',
+					'line-cap': 'round'
+				},
+				'paint': {
+					'line-color': '#49974a',
+					'line-width': 6
+				}
 			});
 		}
 
