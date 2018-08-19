@@ -22,3 +22,11 @@ This is the very beginning of the project. Let's share some links
   - download ```osm-2018-08-13-v3.8-germany_berlin.mbtiles```
 - I have installed tileserver-php and copied the .mbtiles file to my own server
 - the new style file is served here: https://tursics.github.io/bvg-hackathon-styled-map/map-style/bvg-style.json
+
+
+- go to [VBB GTFS](https://vbb-gtfs.jannisr.de/latest/) from Jannis
+- or use overpass api?
+
+
+- https://github.com/TheGartrellGroup/Mapbox-GL-Print-Export-For-Port does not work
+- use https://github.com/mpetroff/print-maps

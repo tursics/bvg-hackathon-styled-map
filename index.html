@@ -20,12 +20,16 @@
 					 user-select: none;
 		}
         .map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+		.hidden-map { overflow: hidden; height: 0; width: 0; position: fixed; }
+	</style>
 </head>
 <body>
 	<div id='before' class='map'></div>
 	<div id='after' class='map'></div>
 
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/canvas-toblob/0.1/canvas-toBlob.min.js"></script>
+	<script type="text/javascript" src="http://cdn.rawgit.com/eligrey/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jspdf/1.3.4/jspdf.min.js"></script>
 	<script>
 
 		mapboxgl.accessToken = 'pk.eyJ1IjoidHVyc2ljcyIsImEiOiI1UWlEY3RNIn0.U9sg8F_23xWXLn4QdfZeqg';
@@ -51,6 +55,104 @@
 
 		afterMap.addControl(new mapboxgl.NavigationControl());
 		compare._setPosition(document.getElementById('after').offsetWidth);
+
+		class PrintControl {
+			onAdd(map){
+				this.map = afterMap;
+				this.container = document.createElement('div');
+				this.container.className = 'mapboxgl-ctrl mapboxgl-ctrl-group';
+				this.container.innerHTML = '<button class="mapboxgl-ctrl-icon" type="button" aria-label="PDF">PDF</button>';
+				this.container.onclick = generateMap;
+				return this.container;
+			}
+			onRemove(){
+				this.container.parentNode.removeChild(this.container);
+				this.map = undefined;
+			}
+		}
+
+		const printControl = new PrintControl();
+		afterMap.addControl(printControl);
+
+		function generateMap() {
+			var width = 297;
+			var height = 210;
+			var dpi = 300;
+			var unit = 'mm';
+
+			var zoom = afterMap.getZoom();
+			var center = afterMap.getCenter();
+			var bearing = afterMap.getBearing();
+			var style = afterMap.getStyle();
+			var pitch = afterMap.getPitch();
+
+			createPrintMap(width, height, dpi, unit, zoom, center, bearing, style, pitch);
+		}
+
+		function toPixels(length) {
+			var conversionFactor = 96 / 25.4;
+
+			return conversionFactor * length + 'px';
+		}
+
+		function createPrintMap(width, height, dpi, unit, zoom, center, bearing, style, pitch) {
+			// Calculate pixel ratio
+			var actualPixelRatio = window.devicePixelRatio;
+			Object.defineProperty(window, 'devicePixelRatio', {
+				get: function() {return dpi / 96}
+			});
+
+			// Create map container
+			var hidden = document.createElement('div');
+			hidden.className = 'hidden-map';
+			document.body.appendChild(hidden);
+			var container = document.createElement('div');
+			container.style.width = toPixels(width);
+			container.style.height = toPixels(height);
+			hidden.appendChild(container);
+
+			// Render map
+			var renderMap = new mapboxgl.Map({
+				container: container,
+				center: center,
+				zoom: zoom,
+				style: style,
+				bearing: bearing,
+				pitch: pitch,
+				interactive: false,
+				attributionControl: false
+			});
+			renderMap.once('load', function() {
+				var pdf = new jsPDF({
+					orientation: width > height ? 'l' : 'p',
+					unit: unit,
+					format: [width, height],
+					compress: true
+				});
+
+				pdf.addImage(renderMap.getCanvas().toDataURL('image/png'),
+					'png', 0, 0, width, height, null, 'FAST');
+
+				var title = afterMap.getStyle().name,
+					subject = "center: [" + center.lng  + ", " + center.lat + ", " + zoom + "]",
+					attribution = '(c) OpenMapTiles, (c) OpenStreetMap';
+
+				pdf.setProperties({
+					title: title,
+					subject: subject,
+					creator: 'Print Maps',
+					author: attribution
+				})
+
+				pdf.save('map.pdf');
+
+				renderMap.remove();
+				hidden.parentNode.removeChild(hidden);
+				Object.defineProperty(window, 'devicePixelRatio', {
+					get: function() {return actualPixelRatio}
+				});
+			});
+		}
 
 	</script>
 </body>
