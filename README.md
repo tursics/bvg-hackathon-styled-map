@@ -34,3 +34,5 @@ This is the very beginning of the project. Let's share some links
   - my queries are in the /map-style/ folder
   - generate geojson files for all types of lines for the map
 - use QGIS to simplify the lines
+- load geojson files to map https://www.mapbox.com/mapbox-gl-js/example/geojson-polygon/
+
